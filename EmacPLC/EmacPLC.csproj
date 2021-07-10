@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE0AB6C5-52F7-45D1-A233-765634F1F10A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmacPLC</RootNamespace>
+    <AssemblyName>EmacPLC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>EmacPLC.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.6.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="S7.Net">
+      <HintPath>..\packages\S7netplus.0.3.0\lib\net452\S7.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cDatos\ACD_Oracle.cs" />
+    <Compile Include="cDatos\ACD_TB_Distribucion.cs" />
+    <Compile Include="cDatos\ACD_Tb_Lectura_Sorter.cs" />
+    <Compile Include="cDatos\ACD_TipoDespacho.cs" />
+    <Compile Include="cDatos\ConexionOracle.cs" />
+    <Compile Include="cEntidades\cConversion.cs" />
+    <Compile Include="cEntidades\cCorrelativoDB.cs" />
+    <Compile Include="cEntidades\cDispositivos.cs" />
+    <Compile Include="cEntidades\cEnt_Meson.cs" />
+    <Compile Include="cEntidades\cEnt_TB_Tipo_Despacho.cs" />
+    <Compile Include="cEntidades\cENT_Vl_Cbc_Fdx.cs" />
+    <Compile Include="cEntidades\cEnums.cs" />
+    <Compile Include="cEntidades\cPLC.cs" />
+    <Compile Include="cEntidades\cRecirculado.cs" />
+    <Compile Include="cEntidades\cSalidasTroll.cs" />
+    <Compile Include="cEntidades\cTB_Distribucion.cs" />
+    <Compile Include="cEntidades\cTb_Lectura_Cartones.cs" />
+    <Compile Include="cEntidades\cVarGlobales.cs" />
+    <Compile Include="cFunciones\cConexionIP.cs" />
+    <Compile Include="cFunciones\cRegistroErr.cs" />
+    <Compile Include="cNegocio\LGN_Insertar_Lecturas.cs" />
+    <Compile Include="cNegocio\LGN_Oracle.cs" />
+    <Compile Include="cNegocio\LGN_TB_Distribucion.cs" />
+    <Compile Include="cNegocio\LGN_TipoDespacho.cs" />
+    <Compile Include="EmacPLC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmacPLC.Designer.cs">
+      <DependentUpon>EmacPLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\Boolean.cs" />
+    <Compile Include="Types\Byte.cs" />
+    <Compile Include="Types\ByteArray.cs" />
+    <Compile Include="Types\Counter.cs" />
+    <Compile Include="Types\ctestStruct.cs" />
+    <Compile Include="Types\DInt.cs" />
+    <Compile Include="Types\Double.cs" />
+    <Compile Include="Types\DWord.cs" />
+    <Compile Include="Types\Int.cs" />
+    <Compile Include="Types\String.cs" />
+    <Compile Include="Types\Struct.cs" />
+    <Compile Include="Types\Timer.cs" />
+    <Compile Include="Types\Word.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmacPLC.resx">
+      <DependentUpon>EmacPLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

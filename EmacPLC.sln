@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmacPLC", "EmacPLC\EmacPLC.csproj", "{DE0AB6C5-52F7-45D1-A233-765634F1F10A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0AB6C5-52F7-45D1-A233-765634F1F10A}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
